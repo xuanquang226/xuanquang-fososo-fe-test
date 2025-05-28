@@ -3,6 +3,19 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --left-top-nav: #0D57C6;
+  --center-top-nav: #37CFFF;
+  --right-top-nav: #0F5ED6;
+  --button-search: #0373F3;
+  --dropdown-menu: #0155C6;
+  --body: #f2f5f7;
+  --text-breadcrumb: #919eab;
+  --banner: #025fca;
+  --badge-left: #FFD666;
+  --badge-right: #FFAB00;
+  --badge-text: #7A0916;
+  --skyline: #E6F1FF;
+  --skyline-b: #cfe5ff;
 }
 
 @theme inline {
@@ -12,9 +25,25 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@theme {
+  --color-left: var(--left-top-nav);
+  --color-center: var(--center-top-nav);
+  --color-right: var(--right-top-nav);
+  --color-button-search: var(--button-search);
+  --color-dropdown-menu: var(--dropdown-menu);
+  --color-body: var(--body);
+  --color-breadcrumb: var(--text-breadcrumb);
+  --color-banner: var(--banner);
+  --color-badge-left: var(--badge-left);
+  --color-badge-right: var(--badge-right);
+  --color-badge-text: var(--badge-text);
+  --color-skyline: var(--skyline);
+  --color-skyline-b: var(--skyline-b);
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #FFFFFF;
     --foreground: #ededed;
   }
 }
@@ -23,4 +52,14 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }

@@ -1,0 +1,13 @@
+.navbar-bottom__right div{
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-bottom__right div img{
+    height: 60%;
+    width: auto;
+    display: inline-block;
+}
