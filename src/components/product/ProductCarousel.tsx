@@ -5,7 +5,7 @@ import ProductCard from "./ProductCard";
 export default function ProductCarousel() {
     const products = [...Array(14)];
     const itemsVisible:number = 5;
-    const step:number = 2;
+    const step:number = 3;
 
     const [index, setIndex] = useState<number>(0);
     const maxIndex = Math.max(0, Math.ceil((products.length - itemsVisible) / step));

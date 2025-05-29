@@ -18,7 +18,7 @@ const TaggedButton:React.FC<TaggedButtonProps> = ({ label = "Liên quan", active
             border-l-transparent rounded-tr-sm`}></div>
 
           {/* Icon check mark hoặc ảnh */}
-          <div className="absolute top-[1px] right-[1px] text-white text-[10px] leading-none">
+          <div className={`absolute top-[1px] right-[1px] text-white text-[10px] leading-none`}>
             <img src="/images/v.png" alt="" className="" />
           </div>
         </>
