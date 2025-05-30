@@ -1,11 +1,16 @@
 import Link from "next/link";
 import styles from "@/styles/NavbarBottom.module.css";
+import { useCategoryPopupStore } from "@/state/CategoryPopupStore";
 
 export default function NavbarBottom(){
+    const { open, close } = useCategoryPopupStore();
     return(
         <div className={`navbar-bottom w-4/5 my-0 mx-auto grid grid-cols-2 items-center text-black`}>
             <div className={`navbar-bottom__left flex justify-start items-center gap-3`}>
-                <div className={`navbar-bottom__dropdown-menu text-white flex items-center
+                <div 
+                    onMouseEnter={open}
+                    onMouseLeave={close}
+                    className={`navbar-bottom__dropdown-menu text-white flex items-center
                                 shadow-lg px-3 py-2 hover:cursor-pointer hover:bg-sky-400 duration-200 bg-dropdown-menu rounded-sm gap-2
                                 group`}>   
                     <img className={`inline-block`} src="/images/hamburger-menu.png" alt="" />
